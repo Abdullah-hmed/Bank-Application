@@ -4,27 +4,27 @@ public class CurrencyConverter {
     }
     public double PkrtoUsd(double bal){
         double pkrBal;
-        pkrBal = bal/210;
+        pkrBal = bal/287;
         return pkrBal;
     }
     public double PkrtoPound(double bal){
         double poundBal;
-        poundBal = bal/255.27;
+        poundBal = bal/351.53;
         return poundBal;
     }
     public double PkrtoEuro(double bal){
         double euroBal;
-        euroBal = bal/219.01;
+        euroBal = bal/306.54;
         return euroBal;
     }
     public double PkrtoYen(double bal){
         double yenBal;
-        yenBal = bal/1.55;
+        yenBal = bal/1.94;
         return yenBal;
     }
     public double PkrtoRinggitt(double bal){
         double ringgitBal;
-        ringgitBal = bal/47.53;
+        ringgitBal = bal/61.22;
         return ringgitBal;
     }
 }
