@@ -55,7 +55,7 @@ public class CurrencyConverter {
     
     //Using API to get the currency rates
     public static String sendGetRequest(String currency) throws Exception {
-        URL url = new URL("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/"+currency+"/pkr.json");
+        URL url = new URL("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/"+currency+".json");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         // Set the request method to GET
@@ -89,9 +89,9 @@ public class CurrencyConverter {
             
             JsonObject json = JsonParser.parseString(response).getAsJsonObject();
             
-            double pkr = json.get("pkr").getAsDouble();
+            JsonObject eurObject = json.getAsJsonObject(currency);
             
-            price = json.get("pkr").getAsDouble();
+            price = eurObject.get("pkr").getAsDouble();
             
             
             
